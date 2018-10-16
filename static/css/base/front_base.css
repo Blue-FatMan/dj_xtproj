@@ -1,0 +1,223 @@
+/**{*/
+    /*margin: 0;*/
+    /*border: 0;*/
+    /*padding: 0;*/
+    /*vertical-align: baseline;*/
+    /*list-style: none;*/
+    /*text-decoration: none;*/
+/*}*/
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+body{
+    background: #f2f2f2;
+}
+.main{
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.main .main-container{
+    float: left;
+    width: 795px;
+    /*background: pink;*/
+}
+
+.main .sidebar-container{
+    float: right;
+    width: 355px;
+    height: 200px;
+}
+
+.header{
+    width: 100%;
+    height: 64px;
+}
+.nav{
+    /*width: 1170px;*/
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    line-height: 64px;
+    background:deepskyblue;
+}
+.nav .logo-box{
+    width: 180px;
+    height: 50px;
+    background-image: url("https://www.python.org/static/img/python-logo.png") ;
+    background-size: 100%;
+    margin-top: 8px;
+    float: left;
+    margin-left: 30px;
+}
+.nav .menu{
+    float: left;
+    margin-left:100px;
+    overflow: hidden;
+}
+
+.menu li{
+    float: left;
+    margin-right: 40px;
+    /*将边框在盒子内部消化*/
+    box-sizing:border-box;
+    height: 64px;
+}
+.menu li.active{
+    border-bottom: 3px solid black;
+}
+.menu li a{
+    color: black;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+.auth-group{
+    float: right;
+    position: relative;
+    margin-right: 40px;
+}
+.auth-group a{
+    color: black;
+}
+/*iconfont 的引用，先在生成link引入，然后icon-User类标签*/
+.auth-group .user-icon{
+    font-size: 18px;
+    color: black;
+}
+.auth-group:hover .user-more-box{
+    display: block;
+}
+
+.user-more-box{
+    display: none;
+    background: #fff;
+    width: 120px;
+    position: absolute;
+    box-shadow: 0 3px 4px #ccc;
+    border-radius: 5px;
+    top: 65px;
+    right: -30px;
+    font-size: 14px;
+}
+.user-more-box .triangle{
+    border: solid transparent;
+    border-width: 10px;
+    border-bottom-color: #fff;
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -20px;
+    margin-left: 60px;
+}
+.user-more-box a{
+    text-align: center;
+    height: 44px;
+    color: #6d85ac;
+    display: block;
+    line-height: 44px;
+}
+
+
+
+
+.footer{
+    margin-top: 158px;
+    width: 100%;
+    color: #c9c9c9;
+    font-size: 16px;
+}
+.footer-1{
+    width: 100%;
+    height: 100px;
+    background:#555e68 ;
+}
+.footer-1 .footer-inner{
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.footer-inner .logo-box{
+    width: 168px;
+    height: 54px;
+    background: url("https://www.python.org/static/img/python-logo.png");
+    background-size: 120%;
+    margin-top: 20px;
+    float: left;
+}
+.footer-inner .detail-info-group{
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.detail-info-group .top-group{
+    overflow: hidden;
+}
+.top-group .links{
+
+    overflow: hidden;
+    float: left;
+}
+.links li{
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #c9c9c9;
+}
+.links li:last-of-type{
+    border-right: none;
+}
+.links li a{
+    color: #c9c9c9;
+}
+.detail-info-group .about-us{
+    float: left;
+    margin-left: 40px;
+}
+.about-us .wechat{
+    margin-left: 10px;
+    background-image: url("http://xfz.cn/static/build/images/wx-icon.png");
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-size: 30%;
+}
+.about-us .blog{
+    background-image: url("http://www.bufanbiz.com/static/build/images/xl-icon.png");
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    padding-left: 25px;
+    background-size: 35%;
+}
+.detail-info-group .bottom-group{
+    margin-top: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.bottom-group .address{
+    float: left;
+}
+.bottom-group .contact{
+    float: left;
+    margin-left: 40px;
+}
+.footer-2{
+    width:100%;
+    height: 58px;
+    background: #383e44;
+    text-align: center;
+    line-height:58px;
+    font-size: 20px;
+}

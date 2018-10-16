@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+{#    <link rel="stylesheet" href="{% static 'css/news/news.css' %}">#}
+    <link rel="stylesheet" href="{% static 'css/base/front_base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/side.css' %}">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_758416_07tukxdpd20d.css">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{% static 'js/xfzajax.js' %} "></script>
+    <script src="{% static 'js/message.js' %}"></script>
+    <script src="{% static 'js/front_base.js' %}"></script>
+    {% block head %}{% endblock %}
+
+</head>
+<body style="overflow-x:hidden">
+    <header class="header" >
+        <nav class="nav">
+            <h1 class="logo-box" ></h1>
+            <ul class="menu">
+                <li><a href="{% url 'news:index' %}">blog</a></li>
+                <li><a href="{% url 'course:index' %}">course</a></li>
+                <li><a href="{% url 'payinfo:payinfo' %}">payinfo</a></li>
+                <li><a href="{% url 'news:search' %}">search</a></li>
+            </ul>
+            <div class="auth-group">
+                <span class="user-icon icon-User iconfont" ></span>
+                {# user 和is_authenticated是在上下文处理器中 #}
+                {% if user.is_authenticated %}
+                    <a href="javascript:void(0);">{{ user.username }}</a>
+                    <div class="user-more-box">
+                        <i class="triangle"></i>
+                        {% if user.is_staff %}
+                            <a href="{% url 'cms:index' %}">管理系统</a>
+                        {% endif %}
+                        <a href="{% url 'xfzauth:logout' %}">退出登录</a>
+                    </div>
+                {% else %}
+                    <a href="{% url 'xfzauth:login' %}">登陆 /</a>
+                    <a href="{% url 'xfzauth:register' %}">注册</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    {% block main %}{% endblock %}
+    <div class="footer">
+        <div class="footer-1">
+            <div class="footer-inner">
+                <div class="logo-box"></div>
+                <div class="detail-info-group">
+                    <div class="top-group">
+                        <ul class="links">
+                            <li><a href="{% url 'news:index' %}">blog</a></li>
+                            <li><a href="{% url 'course:index' %}">video</a></li>
+                            <li><a href="#">links</a></li>
+                            <li><a href="#">suggestions</a></li>
+                        </ul>
+                        <div class="about-us">
+                            <span class="about-us">about us:</span>
+                            <span class="wechat">wechat</span>
+                            <span class="blog">blog</span>
+                        </div>
+                    </div>
+                    <div class="bottom-group">
+                        <p class="address">address：hubei wuhan</p>
+                        <p class="contact">contact：12345678900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2">
+            The  simpler &nbsp; the  happier &emsp;&emsp; The harder &nbsp; the luckier
+        </div>
+    </div>
+</body>
+</html>
